@@ -12,7 +12,7 @@ int main()
 
 double packageWeight;
 double shippingDistance;
-double  rate1 = 1.10;
+double rate1 = 1.10;
 double rate2 = 2.20;
 double rate3 = 3.70;
 double rate4 = 4.80;
@@ -33,17 +33,22 @@ double rate4 = 4.80;
 	}
 
 	if (packageWeight >= 2)
-		int rate = rate1;
-	else (packageWeight > 2 and <= 6)
-		int rate = rate2
-			else (packageWeight > 6 and <= 10)
-				int rate = rate3
-				else
-					int rate = rate4
-}
+	{
+		double rate = rate1;
+	else if (packageWeight > 2 && packageWeight <= 6)
+	}
+		double rate = rate2;
+	else if (packageWeight > 6 && packageWeight <= 10)
+	{
+		double rate = rate3;
+	}
+	else
+	{
+		double rate = rate4
+	}
 
-int shippingUnits = ceil(shippingUnits / 500);
-int totalCharge = rate * shippingUnits;
+double shippingUnits = ceil(shippingUnits / 500);
+double totalCharge = rate * shippingUnits;
 std::cout << "Total shipping charge: $" << totalCharge << std::endl;
-	return 0;
+return 0;
 }
