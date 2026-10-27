@@ -9,24 +9,27 @@ using namespace std;
 int main()
 {
 	std::cout << "Shipping Charges Calculator\n";
-	int rate1 = 1.10;
-	int rate2 = 2.20;
-	int rate3 = 3.70;
-	int rate4 = 4.80;
 
-		std::cout << "Enter package weight in kilograms:";
+double packageWeight;
+double shippingDistance;
+double  rate1 = 1.10;
+double rate2 = 2.20;
+double rate3 = 3.70;
+double rate4 = 4.80;
+
+	std::cout << "Enter package weight in kilograms:";
 	std::cin >> packageWeight;
 
 	std::cout << "Enter shipping distance in miles:";
 	std::cin >> shippingDistance;
 
-	if (pairWeight <= 0 || packageWeight > 20)
+	if (packageWeight <= 0 || packageWeight > 20)
 	{
-		std::cout >> "Invalid weight. Please eneter a weight between 0 and 20 kilograms.:";
+		std::cout << "Invalid weight. Please enter a weight between 0 and 20 kilograms.:";
 	}
 	if (shippingDistance < 10 || shippingDistance > 3000)
 	{
-		std::cout >> "Invalid distance. Please enter a distance between 10 and 3000.:";
+		std::cout << "Invalid distance. Please enter a distance between 10 and 3000.:";
 	}
 
 	if (packageWeight >= 2)
